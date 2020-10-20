@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* ESTILOS GERAIS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+body {
+  width: 100%;
+}
+
+/* CABEÇALHO */
+
+header {
+  width: 100%;
+  background: #383a59;
+  padding: 36px 36px 60px 36px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburguer {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburguer:after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 70%;
+  height: 8%;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: 1s ease;
+}
+
+.hamburguer:before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  width: 70%;
+  height: 8%;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: 1s ease;
+}
+
+/* MENU DO HEADER */
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  margin-right: 16px;
+}
+.menu li + li {
+  border-left: 2px solid #434c59;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 24px;
+  color: #c3cdd9;
+  transition: 0.5s ease;
+}
+
+.menu li a:hover {
+  color: #f0f3f7;
+}
+
+#hamburguer:checked ~ label .hamburguer:after {
+  top: 45%;
+  transform: rotate(230deg);
+}
+
+#hamburguer:checked ~ label .hamburguer:before {
+  top: 45%;
+  transform: rotate(-230deg);
+}
+
+/* INTRODUCAO */
+
+.introducao {
+  width: 100%;
+  height: 540px;
+  margin-top: 150px;
+  background: url("../img/bg-intro.jpg") no-repeat;
+  background-size: cover;
+}
+
+.introducao div {
+  padding-top: 140px;
+  text-align: center;
+}
+
+.introducao h1 {
+  font-family: Roboto;
+  font-size: 72px;
+  text-transform: uppercase;
+  color: #F0F3F7;
+}
+
+.introducao p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  color: #F0F3F7;
+}
+
+.button {
+  display: block;
+  max-width: 140px;
+  margin: 20px auto;
+  padding: 29px 32px;
+  border: 5px solid #F0F3F7;
+  text-decoration: none;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 24px;
+  color: #F0F3F7; 
+  text-align: center;
+}
+
+/* BLOCKQUOTE */
+
+.quote {
+  margin: 50px auto;
+}
+
+.quote_cliente p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* PRODUTO INVERNO */
+
+.produto {
+  background: url(../img/bg-produto-inverno.jpg) no-repeat;
+  background-size: cover;
+  padding: 62px;
+}
+
+.produto + .produto {
+  margin-top: 128px;
+}
+
+.produto_info {
+  width: 508px;
+  height: 470px;
+  background: #383A59;
+  padding: 32px 0;
+}
+
+.produto_info img {
+  display: block;
+  width: 128px;
+  height: 160px;
+  margin:  auto;
+}
+
+.produto_info h3 {
+  font-family: Roboto;
+  font-size: 36px;
+  color: #F0F3F7;
+  text-align: center;
+}
+
+.produto_info > div {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.produto_info p {
+  margin-top: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: #F0F3F7;
+  text-align: center;
+}
+/* FOOTER */
+
+.footer {
+  background: #383a59;
+  padding: 32px 48px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+}
+
+
+.footer > div {
+  flex: 1 1 240px;
+}
+
+
+.footer h3 {
+  font-family: Roboto;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #f0f3f7;
+  margin: 0px 24px 16px 24px;
+}
+
+/* MAPA DO SITE */
+
+.map ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+
+.map li a {
+  display: block;
+  padding: 10px 15px;
+  font-family: Raleway;
+  font-size: 24px;
+  text-decoration: none;
+  color: #c3cdd9;
+  transition: 0.5s ease;
+}
+
+.map ul li a:hover {
+  color: #f0f3f7;
+}
+
+/* CONTATO DO MAPA */
+
+.contato_map {
+  margin-left: 32px;
+}
+
+.contato_map ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+}
+
+
+.contato_map li  {
+    display: block;
+    padding: 10px 15px;
+    font-family: Raleway;
+    font-size: 24px;
+    text-decoration: none;
+    color: #c3cdd9;
+}
+
+/* REDES SOCIAIS */
+
+.redes {
+  margin-left: 18px;
+}
+
+.redes ul {
+  display: flex;
+  list-style: none;
+}
+
+.redes li{
+  margin-left: 18px;
+}
+
+/* MEDIA 960px */
+
+@media screen and (max-width: 960px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  
+  .hamburguer {
+    display: block;
+    z-index: 999;
+    margin-right: 20px;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    margin: 0;
+    background: #333;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    padding: 100px 20px;
+    transition: 0.5s ease;
+  }
+
+  .menu li {
+    margin-bottom: 15px;
+  }
+
+  .menu li + li {
+    border-left: 0;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .menu.active {
+    right: -100%;
+  }
+
+  .introducao {
+    background: url("../img/bg-intro-tablet.jpg") no-repeat center;
+    height: 380px;
+    margin-top: 96px;
+  }
+
+  .introducao div {
+    padding-top: 70px;
+  }
+
+  .produto_info {
+    width: 340px;
+    padding-top: 96px;
+  }
+
+
+  .produto_info img {
+    width: 72px;
+    height: 110px;
+  }
+  
+  .produto_info h3 {
+    font-size: 32px;
+  }
+ 
+  
+  .produto_info p {
+    font-size: 16px;
+  }
+
+
+  .button {
+    max-width: 110px;
+    padding: 14px 22px;
+
+  }
+
+  .footer h3 {
+    font-size: 24px;
+  }
+
+  .map li a {
+    font-size: 18px;
+  }
+
+  .contato_map ul {
+    margin-left: 12px;
+  }
+
+  .contato_map li {
+    font-size: 18px;
+  }
+
+  .redes {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  
+  .redes ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .redes li{
+    margin-left: 20px;
+  }
+
+  .redes img {
+    width: 48px;
+    height: 48px;
+  }
+
+  
+}
+
+/* MEDIA 440px */
+
+@media screen and (max-width: 440px) {
+  .hamburguer {
+    margin-left: 20px;
+  }
+  .menu {
+    max-width: 180px;
+  }
+
+  .menu li + li {
+    border-left: 0;
+  }
+  .introducao {
+    background: url("../img/bg-intro-mobile.jpg") no-repeat;
+    height: 300px;
+    margin-top: 86px;
+  }
+
+
+  .introducao h1 {
+    font-size: 48px;
+  }
+
+  .introducao p {
+    font-size: 24px;
+  }
+
+  .introducao a {
+    padding: 8px 4px;
+    font-size: 16px;
+    border: 3px solid #F0F3F7;;
+  }
+
+  .contato_map {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .redes li + li{
+    margin-left: 12px;
+  }
+}
