@@ -1,0 +1,45 @@
+/* ESTILO DE GALERIA */
+
+.galeria {
+  margin: 180px auto 64px auto;
+}
+
+.galeria h2 {
+  margin-bottom: 32px;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #383a59;
+}
+.container {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  flex: 1 1 400px;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .galeria {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .galeria {
+    margin-top: 108px;
+    margin-bottom: 32px;
+  }
+
+  .galeria h2 {
+    margin-bottom: 16px;
+    font-size: 36px;
+  }
+}
+
